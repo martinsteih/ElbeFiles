@@ -11,11 +11,11 @@ pool:
 
 steps:
 - script: 
-    sudo echo "deb http://debian.linutronix.de/elbe stretch main" >> /etc/apt/sources.list.d/elbe.list
-    sudo echo "deb http://debian.linutronix.de/elbe-common stretch main" >> /etc/apt/sources.list.d/elbe.list
-    sudo wget -q -O - http://debian.linutronix.de/elbe-common/elbe-repo.pub | apt-key add -
-    sudo apt-get update
-    sudo apt-get install elbe -y
+    echo "deb http://debian.linutronix.de/elbe stretch main" >> /etc/apt/sources.list.d/elbe.list
+    echo "deb http://debian.linutronix.de/elbe-common stretch main" >> /etc/apt/sources.list.d/elbe.list
+    wget -q -O - http://debian.linutronix.de/elbe-common/elbe-repo.pub | apt-key add -
+    apt-get update
+    apt-get install elbe -y
 - script: 
     elbe initvm create Test.xml
   displayName: 'Build Image from Xml'
