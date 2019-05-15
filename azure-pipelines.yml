@@ -10,13 +10,20 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
-
 - script: 
-    cat Test.xml
+    sudo echo "deb http://debian.linutronix.de/elbe stretch main" >> /etc/apt/sources.list.d/elbe.list
+    sudo echo "deb http://debian.linutronix.de/elbe-common stretch main" >> /etc/apt/sources.list.d/elbe.list
+    sudo wget -q -O - http://debian.linutronix.de/elbe-common/elbe-repo.pub | apt-key add -
+    sudo apt-get update
+    sudo apt-get install elbe -y
+- script: 
+    elbe initvm create Test.xml
+  displayName: 'Build Image from Xml'
+
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(Build.BinariesDirectory)'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
