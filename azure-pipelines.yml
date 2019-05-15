@@ -1,0 +1,28 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'debian-latest'
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
+
+- script: 
+    echo "deb http://debian.linutronix.de/elbe stretch main" >> /etc/apt/sources.list.d/elbe.list
+    echo "deb http://debian.linutronix.de/elbe-common stretch main" >> /etc/apt/sources.list.d/elbe.list
+    wget -q -O - http://debian.linutronix.de/elbe-common/elbe-repo.pub | apt-key add -
+    apt-get update
+    apt-get install elbe -y
+- script: 
+    elbe initvm create Test.xml
