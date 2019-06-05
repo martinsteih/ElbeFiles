@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  agent: "LRV4003"
+  name: Hosted LRV4003
 
 steps:
 - script: 
