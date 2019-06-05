@@ -11,13 +11,7 @@ pool:
 
 steps:
 - script: 
-    echo "deb http://debian.linutronix.de/elbe stretch main" >> /etc/apt/sources.list.d/elbe.list
-    echo "deb http://debian.linutronix.de/elbe-common stretch main" >> /etc/apt/sources.list.d/elbe.list
-    wget -q -O - http://debian.linutronix.de/elbe-common/elbe-repo.pub | apt-key add -
-    apt-get update
-    apt-get install elbe -y
-- script: 
-    elbe initvm create Test.xml
+    elbe initvm submit Test.xml
   displayName: 'Build Image from Xml'
 
 - task: ArchiveFiles@2
