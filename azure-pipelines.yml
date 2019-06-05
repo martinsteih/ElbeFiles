@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  name: Default LRV4003
+  name: Default
 
 steps:
 - script: 
