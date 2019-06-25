@@ -1,0 +1,104 @@
+<!-- Schema Description is supposed to leave exactly this way (As per Linutronix) -->
+<ns0:RootFileSystem 
+	xmlns:ns0="https://www.linutronix.de/projects/Elbe" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	created="2009-05-20T08:50:56" 
+	revision="6" 
+	xsi:schemaLocation="https://www.linutronix.de/projects/Elbe dbsfed.xsd">
+	<project>
+		<name>Ricos20XX_Dev</name>
+		<version>1.0</version>
+		<description>Development Image for Ricos20XX</description>
+		<buildtype>amd64</buildtype>
+		<mirror>
+			<primary_host>ftp.de.debian.org</primary_host>
+			<primary_path>/debian</primary_path>
+			<primary_proto>http</primary_proto>
+			<url-list>
+				<url>
+					<binary>
+						http://ftp.de.debian.org/debian stretch main
+					</binary>
+					<source>
+						http://ftp.de.debian.org/debian stretch main
+					</source>
+				</url>
+				<url>
+					<binary>
+						http://ftp.de.debian.org/debian stretch-backports main
+					</binary>
+					<source>
+						http://ftp.de.debian.org/debian stretch-backports main
+					</source>
+				</url>
+			</url-list>
+		</mirror>
+		<noauth/>
+		<suite>sid</suite>
+	</project>
+	<target>
+		<hostname>control</hostname>
+		<domain></domain>
+		<passwd>Ricos2020!</passwd><!--Root Password-->
+		<console>ttyS0,115200</console>
+		<images>
+			<msdoshd><!-- Likely to change ???-->
+				<name>ricos.img</name>
+				<size>6GiB</size>
+				<grub-install/>
+				<partition>
+					<size>2GiB</size>
+					<label>rfs</label>
+				</partition>
+				<partition>
+					<size>remain</size>
+					<label>home</label>
+				</partition>
+			</msdoshd>
+		</images>
+		<fstab>
+			<bylabel>
+				<label>rfs</label>
+				<mountpoint>/</mountpoint>
+				<fs>
+					<type>ext4</type>
+					<tune2fs>-i 0</tune2fs>
+				</fs>
+			</bylabel>
+			<bylabel>
+				<label>home</label>
+				<mountpoint>/home</mountpoint>
+				<fs>
+					<type>ext4</type>
+					<tune2fs>-i 0</tune2fs>
+				</fs>
+			</bylabel>
+		</fstab>
+		<norecommend/>
+		<finetuning>
+			<adduser passwd="Ricos2020." shell="/bin/bash">ricos</adduser>
+			<rm>/var/cache/apt/archives/*.deb</rm>
+			<command>echo "GRUB_GFXPAYLOAD_LINUX=text" >> /etc/default/grub</command>
+			<command> echo "auto enp1s0\nallow-hotplug enp0s3\niface enp1s0 inet static\naddress 192.168.1.10" >> /etc/network/interfaces</command>
+		</finetuning>
+		<pkg-list>
+			<pkg>grub-pc</pkg>
+			<pkg pin="stretch-backports">linux-image-rt-amd64</pkg>
+			<pkg pin="stretch-backports">linux-perf</pkg>
+			<pkg>openssh-server</pkg>
+			<pkg>openssh-client</pkg>
+			<pkg>rt-tests</pkg>
+			<pkg>trace-cmd</pkg>
+			<pkg>net-tools</pkg>
+			<pkg>e2fsprogs</pkg>
+			<pkg>less</pkg>
+			<pkg>libboost-dev</pkg>
+			<pkg>wget</pkg>
+			<pkg>bash</pkg>
+			<pkg>gzip</pkg>
+			<pkg>g++</pkg>
+			<pkg>gdb</pkg>
+			<pkg>sudo</pkg>
+		</pkg-list>
+	</target>
+</ns0:RootFileSystem>
