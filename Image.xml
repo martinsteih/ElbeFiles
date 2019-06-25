@@ -43,7 +43,7 @@
 		<console>ttyS0,115200</console>
 		<images>
 			<msdoshd><!-- Likely to change ???-->
-				<name>ricos.img</name>
+				<name>ricos_X64.img</name>
 				<size>6GiB</size>
 				<grub-install/>
 				<partition>
