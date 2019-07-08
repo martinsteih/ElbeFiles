@@ -74,7 +74,6 @@
 				</fs>
 			</bylabel>
 		</fstab>
-		<norecommend/>
 		<finetuning>
 			<adduser passwd="Ricos2020." shell="/bin/bash">ricos</adduser>
 			<rm>/var/cache/apt/archives/*.deb</rm>
