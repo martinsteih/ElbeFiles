@@ -1,0 +1,524 @@
+[INFO] Build started
+[INFO] ELBE Report for Project lachmann
+Report timestamp: 20210204-130223
+[CMD] reprepro --basedir "/var/cache/elbe/40b33f89-e134-404b-bb0b-2b4ee297e944/repo" export bullseye
+[CMD] mkdir -p "/var/cache/elbe/40b33f89-e134-404b-bb0b-2b4ee297e944/chroot"
+[INFO] Debootstrap log
+[CMD] dpkg --print-architecture
+[CMD] debootstrap  --include="gnupg" --foreign --arch=arm64  "bullseye" "/var/cache/elbe/40b33f89-e134-404b-bb0b-2b4ee297e944/chroot" "http://ftp.de.debian.org//debian"
+I: Retrieving InRelease 
+I: Checking Release signature
+I: Valid Release signature (key id 0146DC6D4A0B2914BDED34DB648ACFD622F3D138)
+I: Retrieving Packages 
+I: Validating Packages 
+I: Resolving dependencies of required packages...
+I: Resolving dependencies of base packages...
+I: Checking component main on http://ftp.de.debian.org//debian...
+I: Retrieving libacl1 2.2.53-10
+I: Validating libacl1 2.2.53-10
+I: Retrieving adduser 3.118
+I: Validating adduser 3.118
+I: Retrieving libapparmor1 2.13.6-7
+I: Validating libapparmor1 2.13.6-7
+I: Retrieving apt 2.1.18
+I: Validating apt 2.1.18
+I: Retrieving apt-utils 2.1.18
+I: Validating apt-utils 2.1.18
+I: Retrieving libapt-pkg6.0 2.1.18
+I: Validating libapt-pkg6.0 2.1.18
+I: Retrieving libargon2-1 0~20171227-0.2
+I: Validating libargon2-1 0~20171227-0.2
+I: Retrieving libattr1 1:2.4.48-6
+I: Validating libattr1 1:2.4.48-6
+I: Retrieving libaudit-common 1:3.0-2
+I: Validating libaudit-common 1:3.0-2
+I: Retrieving libaudit1 1:3.0-2
+I: Validating libaudit1 1:3.0-2
+I: Retrieving base-files 11
+I: Validating base-files 11
+I: Retrieving base-passwd 3.5.48
+I: Validating base-passwd 3.5.48
+I: Retrieving bash 5.1-2
+I: Validating bash 5.1-2
+I: Retrieving libdns-export1110 1:9.11.19+dfsg-1
+I: Validating libdns-export1110 1:9.11.19+dfsg-1
+I: Retrieving libisc-export1105 1:9.11.19+dfsg-1
+I: Validating libisc-export1105 1:9.11.19+dfsg-1
+I: Retrieving bsdmainutils 12.1.7
+I: Validating bsdmainutils 12.1.7
+I: Retrieving calendar 12.1.7
+I: Validating calendar 12.1.7
+I: Retrieving ncal 12.1.7
+I: Validating ncal 12.1.7
+I: Retrieving libbz2-1.0 1.0.8-4
+I: Validating libbz2-1.0 1.0.8-4
+I: Retrieving libdebconfclient0 0.256
+I: Validating libdebconfclient0 0.256
+I: Retrieving coreutils 8.32-4
+I: Validating coreutils 8.32-4
+I: Retrieving cpio 2.13+dfsg-4
+I: Validating cpio 2.13+dfsg-4
+I: Retrieving cron 3.0pl1-136
+I: Validating cron 3.0pl1-136
+I: Retrieving libcryptsetup12 2:2.3.4-2
+I: Validating libcryptsetup12 2:2.3.4-2
+I: Retrieving libsasl2-2 2.1.27+dfsg-2
+I: Validating libsasl2-2 2.1.27+dfsg-2
+I: Retrieving libsasl2-modules-db 2.1.27+dfsg-2
+I: Validating libsasl2-modules-db 2.1.27+dfsg-2
+I: Retrieving dash 0.5.11+git20200708+dd9ef66-5
+I: Validating dash 0.5.11+git20200708+dd9ef66-5
+I: Retrieving libdb5.3 5.3.28+dfsg1-0.6
+I: Validating libdb5.3 5.3.28+dfsg1-0.6
+I: Retrieving debconf 1.5.74
+I: Validating debconf 1.5.74
+I: Retrieving debconf-i18n 1.5.74
+I: Validating debconf-i18n 1.5.74
+I: Retrieving debian-archive-keyring 2019.1
+I: Validating debian-archive-keyring 2019.1
+I: Retrieving debianutils 4.11.2
+I: Validating debianutils 4.11.2
+I: Retrieving diffutils 1:3.7-5
+I: Validating diffutils 1:3.7-5
+I: Retrieving dmidecode 3.3-1
+I: Validating dmidecode 3.3-1
+I: Retrieving dpkg 1.20.7.1
+I: Validating dpkg 1.20.7.1
+I: Retrieving e2fsprogs 1.45.7-1
+I: Validating e2fsprogs 1.45.7-1
+I: Retrieving libcom-err2 1.45.7-1
+I: Validating libcom-err2 1.45.7-1
+I: Retrieving libext2fs2 1.45.7-1
+I: Validating libext2fs2 1.45.7-1
+I: Retrieving libss2 1.45.7-1
+I: Validating libss2 1.45.7-1
+I: Retrieving logsave 1.45.7-1
+I: Validating logsave 1.45.7-1
+I: Retrieving libelf1 0.182-3
+I: Validating libelf1 0.182-3
+I: Retrieving findutils 4.8.0-1
+I: Validating findutils 4.8.0-1
+I: Retrieving cpp-10 10.2.1-6
+I: Validating cpp-10 10.2.1-6
+I: Retrieving gcc-10-base 10.2.1-6
+I: Validating gcc-10-base 10.2.1-6
+I: Retrieving libgcc-s1 10.2.1-6
+I: Validating libgcc-s1 10.2.1-6
+I: Retrieving libstdc++6 10.2.1-6
+I: Validating libstdc++6 10.2.1-6
+I: Retrieving gcc-9-base 9.3.0-20
+I: Validating gcc-9-base 9.3.0-20
+I: Retrieving cpp 4:10.2.1-1
+I: Validating cpp 4:10.2.1-1
+I: Retrieving libc-bin 2.31-9
+I: Validating libc-bin 2.31-9
+I: Retrieving libc6 2.31-9
+I: Validating libc6 2.31-9
+I: Retrieving libgmp10 2:6.2.1+dfsg-1
+I: Validating libgmp10 2:6.2.1+dfsg-1
+I: Retrieving dirmngr 2.2.20-1
+I: Validating dirmngr 2.2.20-1
+I: Retrieving gnupg 2.2.20-1
+I: Validating gnupg 2.2.20-1
+I: Retrieving gnupg-l10n 2.2.20-1
+I: Validating gnupg-l10n 2.2.20-1
+I: Retrieving gnupg-utils 2.2.20-1
+I: Validating gnupg-utils 2.2.20-1
+I: Retrieving gpg 2.2.20-1
+I: Validating gpg 2.2.20-1
+I: Retrieving gpg-agent 2.2.20-1
+I: Validating gpg-agent 2.2.20-1
+I: Retrieving gpg-wks-client 2.2.20-1
+I: Validating gpg-wks-client 2.2.20-1
+I: Retrieving gpg-wks-server 2.2.20-1
+I: Validating gpg-wks-server 2.2.20-1
+I: Retrieving gpgconf 2.2.20-1
+I: Validating gpgconf 2.2.20-1
+I: Retrieving gpgsm 2.2.20-1
+I: Validating gpgsm 2.2.20-1
+I: Retrieving gpgv 2.2.20-1
+I: Validating gpgv 2.2.20-1
+I: Retrieving libgnutls30 3.7.0-5
+I: Validating libgnutls30 3.7.0-5
+I: Retrieving grep 3.6-1
+I: Validating grep 3.6-1
+I: Retrieving gzip 1.10-2
+I: Validating gzip 1.10-2
+I: Retrieving hostname 3.23
+I: Validating hostname 3.23
+I: Retrieving ifupdown 0.8.36
+I: Validating ifupdown 0.8.36
+I: Retrieving init 1.60
+I: Validating init 1.60
+I: Retrieving init-system-helpers 1.60
+I: Validating init-system-helpers 1.60
+I: Retrieving iproute2 5.10.0-3
+I: Validating iproute2 5.10.0-3
+I: Retrieving libip4tc2 1.8.7-1
+I: Validating libip4tc2 1.8.7-1
+I: Retrieving libxtables12 1.8.7-1
+I: Validating libxtables12 1.8.7-1
+I: Retrieving iputils-ping 3:20200821-2
+I: Validating iputils-ping 3:20200821-2
+I: Retrieving isc-dhcp-client 4.4.1-2.2
+I: Validating isc-dhcp-client 4.4.1-2.2
+I: Retrieving isc-dhcp-common 4.4.1-2.2
+I: Validating isc-dhcp-common 4.4.1-2.2
+I: Retrieving libisl23 0.23-1
+I: Validating libisl23 0.23-1
+I: Retrieving libjansson4 2.13.1-1
+I: Validating libjansson4 2.13.1-1
+I: Retrieving libjson-c5 0.15-1
+I: Validating libjson-c5 0.15-1
+I: Retrieving libkeyutils1 1.6.1-2
+I: Validating libkeyutils1 1.6.1-2
+I: Retrieving kmod 28-1
+I: Validating kmod 28-1
+I: Retrieving libkmod2 28-1
+I: Validating libkmod2 28-1
+I: Retrieving libgssapi-krb5-2 1.18.3-4
+I: Validating libgssapi-krb5-2 1.18.3-4
+I: Retrieving libk5crypto3 1.18.3-4
+I: Validating libk5crypto3 1.18.3-4
+I: Retrieving libkrb5-3 1.18.3-4
+I: Validating libkrb5-3 1.18.3-4
+I: Retrieving libkrb5support0 1.18.3-4
+I: Validating libkrb5support0 1.18.3-4
+I: Retrieving less 551-2
+I: Validating less 551-2
+I: Retrieving libassuan0 2.5.3-7.1
+I: Validating libassuan0 2.5.3-7.1
+I: Retrieving libbpf0 1:0.3-2
+I: Validating libbpf0 1:0.3-2
+I: Retrieving libbsd0 0.10.0-1
+I: Validating libbsd0 0.10.0-1
+I: Retrieving libcap-ng0 0.7.9-2.2+b1
+I: Validating libcap-ng0 0.7.9-2.2+b1
+I: Retrieving libcap2 1:2.44-1
+I: Validating libcap2 1:2.44-1
+I: Retrieving libcap2-bin 1:2.44-1
+I: Validating libcap2-bin 1:2.44-1
+I: Retrieving libedit2 3.1-20191231-2+b1
+I: Validating libedit2 3.1-20191231-2+b1
+I: Retrieving libestr0 0.1.10-2.1+b1
+I: Validating libestr0 0.1.10-2.1+b1
+I: Retrieving libfastjson4 0.99.9-1
+I: Validating libfastjson4 0.99.9-1
+I: Retrieving libffi7 3.3-5
+I: Validating libffi7 3.3-5
+I: Retrieving libgcrypt20 1.8.7-2
+I: Validating libgcrypt20 1.8.7-2
+I: Retrieving libgpg-error0 1.38-2
+I: Validating libgpg-error0 1.38-2
+I: Retrieving libidn2-0 2.3.0-5
+I: Validating libidn2-0 2.3.0-5
+I: Retrieving libksba8 1.5.0-3
+I: Validating libksba8 1.5.0-3
+I: Retrieving liblocale-gettext-perl 1.07-4+b1
+I: Validating liblocale-gettext-perl 1.07-4+b1
+I: Retrieving liblognorm5 2.0.5-1.1
+I: Validating liblognorm5 2.0.5-1.1
+I: Retrieving libmnl0 1.0.4-3
+I: Validating libmnl0 1.0.4-3
+I: Retrieving libnftnl11 1.1.9-1
+I: Validating libnftnl11 1.1.9-1
+I: Retrieving libnsl2 1.3.0-2
+I: Validating libnsl2 1.3.0-2
+I: Retrieving libseccomp2 2.5.1-1
+I: Validating libseccomp2 2.5.1-1
+I: Retrieving libselinux1 3.1-2+b2
+I: Validating libselinux1 3.1-2+b2
+I: Retrieving libsemanage-common 3.1-1
+I: Validating libsemanage-common 3.1-1
+I: Retrieving libsemanage1 3.1-1+b2
+I: Validating libsemanage1 3.1-1+b2
+I: Retrieving libsepol1 3.1-1
+I: Validating libsepol1 3.1-1
+I: Retrieving libtasn1-6 4.16.0-2
+I: Validating libtasn1-6 4.16.0-2
+I: Retrieving libtext-charwidth-perl 0.04-10+b1
+I: Validating libtext-charwidth-perl 0.04-10+b1
+I: Retrieving libtext-iconv-perl 1.7-7+b1
+I: Validating libtext-iconv-perl 1.7-7+b1
+I: Retrieving libtext-wrapi18n-perl 0.06-9
+I: Validating libtext-wrapi18n-perl 0.06-9
+I: Retrieving libtirpc-common 1.3.1-1
+I: Validating libtirpc-common 1.3.1-1
+I: Retrieving libtirpc3 1.3.1-1
+I: Validating libtirpc3 1.3.1-1
+I: Retrieving libunistring2 0.9.10-4
+I: Validating libunistring2 0.9.10-4
+I: Retrieving libcrypt1 1:4.4.17-1
+I: Validating libcrypt1 1:4.4.17-1
+I: Retrieving libzstd1 1.4.8+dfsg-1
+I: Validating libzstd1 1.4.8+dfsg-1
+I: Retrieving logrotate 3.18.0-1
+I: Validating logrotate 3.18.0-1
+I: Retrieving lsb-base 11.1.0
+I: Validating lsb-base 11.1.0
+I: Retrieving dmsetup 2:1.02.175-2
+I: Validating dmsetup 2:1.02.175-2
+I: Retrieving libdevmapper1.02.1 2:1.02.175-2
+I: Validating libdevmapper1.02.1 2:1.02.175-2
+I: Retrieving liblz4-1 1.9.3-1
+I: Validating liblz4-1 1.9.3-1
+I: Retrieving mawk 1.3.4.20200120-2
+I: Validating mawk 1.3.4.20200120-2
+I: Retrieving libmpc3 1.2.0-1
+I: Validating libmpc3 1.2.0-1
+I: Retrieving libmpfr6 4.1.0-3
+I: Validating libmpfr6 4.1.0-3
+I: Retrieving nano 5.4-1
+I: Validating nano 5.4-1
+I: Retrieving libncurses6 6.2+20201114-2
+I: Validating libncurses6 6.2+20201114-2
+I: Retrieving libncursesw6 6.2+20201114-2
+I: Validating libncursesw6 6.2+20201114-2
+I: Retrieving libtinfo6 6.2+20201114-2
+I: Validating libtinfo6 6.2+20201114-2
+I: Retrieving ncurses-base 6.2+20201114-2
+I: Validating ncurses-base 6.2+20201114-2
+I: Retrieving ncurses-bin 6.2+20201114-2
+I: Validating ncurses-bin 6.2+20201114-2
+I: Retrieving netbase 6.2
+I: Validating netbase 6.2
+I: Retrieving libhogweed6 3.6-2
+I: Validating libhogweed6 3.6-2
+I: Retrieving libnettle8 3.6-2
+I: Validating libnettle8 3.6-2
+I: Retrieving libnewt0.52 0.52.21-4+b3
+I: Validating libnewt0.52 0.52.21-4+b3
+I: Retrieving whiptail 0.52.21-4+b3
+I: Validating whiptail 0.52.21-4+b3
+I: Retrieving libnftables1 0.9.8-1
+I: Validating libnftables1 0.9.8-1
+I: Retrieving nftables 0.9.8-1
+I: Validating nftables 0.9.8-1
+I: Retrieving libnpth0 1.6-3
+I: Validating libnpth0 1.6-3
+I: Retrieving libldap-2.4-2 2.4.57+dfsg-1
+I: Validating libldap-2.4-2 2.4.57+dfsg-1
+I: Retrieving libssl1.1 1.1.1i-3
+I: Validating libssl1.1 1.1.1i-3
+I: Retrieving libp11-kit0 0.23.22-1
+I: Validating libp11-kit0 0.23.22-1
+I: Retrieving libpam-modules 1.4.0-2
+I: Validating libpam-modules 1.4.0-2
+I: Retrieving libpam-modules-bin 1.4.0-2
+I: Validating libpam-modules-bin 1.4.0-2
+I: Retrieving libpam-runtime 1.4.0-2
+I: Validating libpam-runtime 1.4.0-2
+I: Retrieving libpam0g 1.4.0-2
+I: Validating libpam0g 1.4.0-2
+I: Retrieving libpcre2-8-0 10.36-2
+I: Validating libpcre2-8-0 10.36-2
+I: Retrieving libpcre3 2:8.39-13
+I: Validating libpcre3 2:8.39-13
+I: Retrieving perl-base 5.32.0-6
+I: Validating perl-base 5.32.0-6
+I: Retrieving pinentry-curses 1.1.0-4
+I: Validating pinentry-curses 1.1.0-4
+I: Retrieving libpopt0 1.18-2
+I: Validating libpopt0 1.18-2
+I: Retrieving libprocps8 2:3.3.16-5
+I: Validating libprocps8 2:3.3.16-5
+I: Retrieving procps 2:3.3.16-5
+I: Validating procps 2:3.3.16-5
+I: Retrieving libreadline8 8.1-1
+I: Validating libreadline8 8.1-1
+I: Retrieving readline-common 8.1-1
+I: Validating readline-common 8.1-1
+I: Retrieving rsyslog 8.2012.0-1
+I: Validating rsyslog 8.2012.0-1
+I: Retrieving sed 4.7-1
+I: Validating sed 4.7-1
+I: Retrieving sensible-utils 0.0.14
+I: Validating sensible-utils 0.0.14
+I: Retrieving login 1:4.8.1-1
+I: Validating login 1:4.8.1-1
+I: Retrieving passwd 1:4.8.1-1
+I: Validating passwd 1:4.8.1-1
+I: Retrieving libslang2 2.3.2-5
+I: Validating libslang2 2.3.2-5
+I: Retrieving libsqlite3-0 3.34.1-1
+I: Validating libsqlite3-0 3.34.1-1
+I: Retrieving libsystemd0 247.2-5
+I: Validating libsystemd0 247.2-5
+I: Retrieving libudev1 247.2-5
+I: Validating libudev1 247.2-5
+I: Retrieving systemd 247.2-5
+I: Validating systemd 247.2-5
+I: Retrieving systemd-sysv 247.2-5
+I: Validating systemd-sysv 247.2-5
+I: Retrieving systemd-timesyncd 247.2-5
+I: Validating systemd-timesyncd 247.2-5
+I: Retrieving udev 247.2-5
+I: Validating udev 247.2-5
+I: Retrieving sysvinit-utils 2.96-5
+I: Validating sysvinit-utils 2.96-5
+I: Retrieving tar 1.32+dfsg-1
+I: Validating tar 1.32+dfsg-1
+I: Retrieving tasksel 3.63
+I: Validating tasksel 3.63
+I: Retrieving tasksel-data 3.63
+I: Validating tasksel-data 3.63
+I: Retrieving tzdata 2021a-1
+I: Validating tzdata 2021a-1
+I: Retrieving bsdextrautils 2.36.1-6
+I: Validating bsdextrautils 2.36.1-6
+I: Retrieving bsdutils 1:2.36.1-6
+I: Validating bsdutils 1:2.36.1-6
+I: Retrieving fdisk 2.36.1-6
+I: Validating fdisk 2.36.1-6
+I: Retrieving libblkid1 2.36.1-6
+I: Validating libblkid1 2.36.1-6
+I: Retrieving libfdisk1 2.36.1-6
+I: Validating libfdisk1 2.36.1-6
+I: Retrieving libmount1 2.36.1-6
+I: Validating libmount1 2.36.1-6
+I: Retrieving libsmartcols1 2.36.1-6
+I: Validating libsmartcols1 2.36.1-6
+I: Retrieving libuuid1 2.36.1-6
+I: Validating libuuid1 2.36.1-6
+I: Retrieving mount 2.36.1-6
+I: Validating mount 2.36.1-6
+I: Retrieving util-linux 2.36.1-6
+I: Validating util-linux 2.36.1-6
+I: Retrieving vim-common 2:8.2.2434-1
+I: Validating vim-common 2:8.2.2434-1
+I: Retrieving vim-tiny 2:8.2.2434-1
+I: Validating vim-tiny 2:8.2.2434-1
+I: Retrieving xxd 2:8.2.2434-1
+I: Validating xxd 2:8.2.2434-1
+I: Retrieving libxxhash0 0.8.0-2
+I: Validating libxxhash0 0.8.0-2
+I: Retrieving liblzma5 5.2.5-1.0
+I: Validating liblzma5 5.2.5-1.0
+I: Retrieving zlib1g 1:1.2.11.dfsg-2
+I: Validating zlib1g 1:1.2.11.dfsg-2
+I: Chosen extractor for .deb packages: dpkg-deb
+I: Extracting libacl1...
+I: Extracting adduser...
+I: Extracting apt...
+I: Extracting libapt-pkg6.0...
+I: Extracting libattr1...
+I: Extracting libaudit-common...
+I: Extracting libaudit1...
+I: Extracting base-files...
+I: Extracting base-passwd...
+I: Extracting bash...
+I: Extracting libbz2-1.0...
+I: Extracting libdebconfclient0...
+I: Extracting coreutils...
+I: Extracting dash...
+I: Extracting libdb5.3...
+I: Extracting debconf...
+I: Extracting debian-archive-keyring...
+I: Extracting debianutils...
+I: Extracting diffutils...
+I: Extracting dpkg...
+I: Extracting e2fsprogs...
+I: Extracting libcom-err2...
+I: Extracting libext2fs2...
+I: Extracting libss2...
+I: Extracting logsave...
+I: Extracting findutils...
+I: Extracting gcc-10-base...
+I: Extracting libgcc-s1...
+I: Extracting libstdc++6...
+I: Extracting gcc-9-base...
+I: Extracting libc-bin...
+I: Extracting libc6...
+I: Extracting libgmp10...
+I: Extracting gpgv...
+I: Extracting libgnutls30...
+I: Extracting grep...
+I: Extracting gzip...
+I: Extracting hostname...
+I: Extracting init-system-helpers...
+I: Extracting libkeyutils1...
+I: Extracting libgssapi-krb5-2...
+I: Extracting libk5crypto3...
+I: Extracting libkrb5-3...
+I: Extracting libkrb5support0...
+I: Extracting libcap-ng0...
+I: Extracting libffi7...
+I: Extracting libgcrypt20...
+I: Extracting libgpg-error0...
+I: Extracting libidn2-0...
+I: Extracting libnsl2...
+I: Extracting libseccomp2...
+I: Extracting libselinux1...
+I: Extracting libsemanage-common...
+I: Extracting libsemanage1...
+I: Extracting libsepol1...
+I: Extracting libtasn1-6...
+I: Extracting libtirpc-common...
+I: Extracting libtirpc3...
+I: Extracting libunistring2...
+I: Extracting libcrypt1...
+I: Extracting libzstd1...
+I: Extracting lsb-base...
+I: Extracting liblz4-1...
+I: Extracting mawk...
+I: Extracting libtinfo6...
+I: Extracting ncurses-base...
+I: Extracting ncurses-bin...
+I: Extracting libhogweed6...
+I: Extracting libnettle8...
+I: Extracting libssl1.1...
+I: Extracting libp11-kit0...
+I: Extracting libpam-modules...
+I: Extracting libpam-modules-bin...
+I: Extracting libpam-runtime...
+I: Extracting libpam0g...
+I: Extracting libpcre2-8-0...
+I: Extracting libpcre3...
+I: Extracting perl-base...
+I: Extracting sed...
+I: Extracting login...
+I: Extracting passwd...
+I: Extracting libsystemd0...
+I: Extracting libudev1...
+I: Extracting sysvinit-utils...
+I: Extracting tar...
+I: Extracting tzdata...
+I: Extracting bsdutils...
+I: Extracting libblkid1...
+I: Extracting libmount1...
+I: Extracting libsmartcols1...
+I: Extracting libuuid1...
+I: Extracting mount...
+I: Extracting util-linux...
+I: Extracting libxxhash0...
+I: Extracting liblzma5...
+I: Extracting zlib1g...
+[CMD] cp /usr/bin/qemu-aarch64-static /var/cache/elbe/40b33f89-e134-404b-bb0b-2b4ee297e944/chroot/usr/bin
+[CMD] chroot /var/cache/elbe/40b33f89-e134-404b-bb0b-2b4ee297e944/chroot /debootstrap/debootstrap --second-stage
+W: Failure trying to run:  /sbin/ldconfig
+W: See //debootstrap/debootstrap.log for details
+[ERROR] Debootstrap failed to install the base rootfilesystem.
+Probable cause might be:
+  - Problems with internet connection
+  - Broken mirrors
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/elbepack/rfs.py", line 261, in debootstrap
+    '/debootstrap/debootstrap --second-stage')
+  File "/usr/lib/python3/dist-packages/elbepack/shellhelper.py", line 285, in chroot
+    do(chcmd, env_add=new_env, **kwargs)
+  File "/usr/lib/python3/dist-packages/elbepack/shellhelper.py", line 258, in do
+    raise CommandError(cmd, p.returncode)
+elbepack.shellhelper.CommandError: Error: 1 returned from Command chroot /var/cache/elbe/40b33f89-e134-404b-bb0b-2b4ee297e944/chroot /debootstrap/debootstrap --second-stage
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/elbepack/asyncworker.py", line 194, in execute
+    skip_pbuild=self.skip_pbuilder)
+  File "/usr/lib/python3/dist-packages/elbepack/elbeproject.py", line 595, in build
+    build_sources=build_sources, clean=True)
+  File "/usr/lib/python3/dist-packages/elbepack/rfs.py", line 94, in __init__
+    self.debootstrap(arch)
+  File "/usr/lib/python3/dist-packages/elbepack/rfs.py", line 267, in debootstrap
+    raise DebootstrapException()
+elbepack.rfs.DebootstrapException: Debootstrap Failed
